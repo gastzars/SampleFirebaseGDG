@@ -59,6 +59,11 @@ firebase list
 firebase serve --project <--project-id-->
 ```
 
+#### Deploy to production !
+```bash
+firebase deploy --project <--project-id-->
+```
+
 ## Project skeleton
 ```
 ├── database.rules.json # Rule for database such as index, validation, read condition, and etc.
