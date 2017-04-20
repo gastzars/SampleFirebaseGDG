@@ -1,0 +1,12 @@
+.mdl-layout__tab-bar-button {
+  background: #FFFFFF;
+}
+.mdl-layout__tab-bar {
+  background: #FFFFFF;
+}
+.mdl-layout__content {
+  background: #EEEEEE;
+}
+.demo-card-wide {
+  width: 100%!important;
+}

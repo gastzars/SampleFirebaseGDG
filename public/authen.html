@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample Firebase</title>
+
+    <!-- Include firebase SDK -->
+    <script defer src="/__/firebase/3.8.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/3.8.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/3.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/3.8.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/3.8.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-orange.min.css" /> 
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <!-- App Styling -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Javascript -->
+    <script src="javascripts/authen.js"></script>
+  </head>
+  <body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Sample Firebase</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="/home" class="mdl-layout__tab">Home</a>
+          <a href="#" class="mdl-layout__tab is-active">Authentication</a>
+          <a href="/database" class="mdl-layout__tab">Database</a>
+          <a href="/storage" class="mdl-layout__tab">Storage</a>
+          <a href="/notification" class="mdl-layout__tab">Notification</a>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col"></div>
+          <div class="mdl-cell mdl-cell--8-col">
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-tabs mdl-js-tabs">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#tab1-panel" class="mdl-tabs__tab is-active">Email Login</a>
+                  <a href="#tab2-panel" class="mdl-tabs__tab">Email Register</a>
+                </div>
+                <!-- Email login TAB -->
+                <div class="mdl-tabs__panel is-active" id="tab1-panel">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Login - ( <span id='login_status'></span> )</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <input id='login_email' class="mdl-textfield__input" type="email">
+                        <label class="mdl-textfield__label" for="login_email">Email</label>
+                      </div>
+                      <br>
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <input id='login_password' class="mdl-textfield__input" type="password">
+                        <label class="mdl-textfield__label" for="login_password">Password</label>
+                      </div>
+                      <br>
+                      <button id="login_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        
+                      </button>
+                  </div>
+                </div>
+                <!-- Email register TAB -->
+                <div class="mdl-tabs__panel" id="tab2-panel">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Register</h2>
+                  </div>
+                  <div class="mdl-card__supporting-text">
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <input id='register_email' class="mdl-textfield__input" type="email">
+                        <label class="mdl-textfield__label" for="register_email">Email</label>
+                      </div>
+                      <br>
+                      <div class="mdl-textfield mdl-js-textfield">
+                        <input id='register_password' class="mdl-textfield__input" type="password">
+                        <label class="mdl-textfield__label" for="register_password">Password</label>
+                      </div>
+                      <br>
+                      <button id="register_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        Register new account
+                      </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

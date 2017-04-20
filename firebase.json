@@ -1,0 +1,30 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/home",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/authen",
+        "destination": "/authen.html"
+      },
+      {
+        "source": "/database",
+        "destination": "/database.html"
+      },
+      {
+        "source": "/storage",
+        "destination": "/storage.html"
+      },
+      {
+        "source": "/notification",
+        "destination": "/notification.html"
+      }
+    ]
+  }
+}
